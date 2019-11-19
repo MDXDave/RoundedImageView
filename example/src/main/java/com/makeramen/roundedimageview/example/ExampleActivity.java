@@ -17,13 +17,14 @@
 package com.makeramen.roundedimageview.example;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toolbar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 public class ExampleActivity extends AppCompatActivity
     implements AdapterView.OnItemSelectedListener {
@@ -33,8 +34,8 @@ public class ExampleActivity extends AppCompatActivity
 
     setContentView(R.layout.example_activity);
 
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    Spinner navSpinner = (Spinner) findViewById(R.id.spinner_nav);
+    Toolbar toolbar = findViewById(R.id.toolbar);
+    Spinner navSpinner = findViewById(R.id.spinner_nav);
 
     navSpinner.setAdapter(ArrayAdapter.createFromResource(
         navSpinner.getContext(),
