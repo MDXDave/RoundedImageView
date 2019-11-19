@@ -1,9 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
-apply plugin: 'signing'
-
-def sonatypeUsername = project.hasProperty('sonatypeUsername') ? sonatypeUsername : ""
-def sonatypePassword = project.hasProperty('sonatypePassword') ? sonatypePassword : ""
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
@@ -47,10 +42,5 @@ task androidSourcesJar(type: Jar) {
 artifacts {
   archives androidSourcesJar
   archives androidJavadocsJar
-}
-
-signing {
-  required { has("release") && gradle.taskGraph.hasTask("uploadArchives") }
-  sign configurations.archives
 }
 
