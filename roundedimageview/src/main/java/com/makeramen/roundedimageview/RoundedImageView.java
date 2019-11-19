@@ -32,7 +32,8 @@ import android.support.annotation.DimenRes;
 import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.support.v7.widget.AppCompatImageView;
+import android.widget.ImageView;
+import androidx.appcompat.widget.AppCompatImageView;
 
 @SuppressWarnings("UnusedDeclaration")
 public class RoundedImageView extends AppCompatImageView {
